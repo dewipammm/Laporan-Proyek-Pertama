@@ -18,17 +18,15 @@ Untuk itulah saya tertarik mengambil topik ini dalam submission saya.
 
 berdasarkan hal tersebut, adapun permasalahan yang diangkat adalah:
 
-* Bagaimana menganalisa poin kegunaan rata-rata dari dataset?
-  
-  
-* Bagaimana memprediksi banyaknya badges yang paling banyak didapatkan?
+* Bagaimana menganalisa datasets dengan poin yang paling banyak?
+* Bagaimana memprediksi banyaknya badges yang paling sering didapatkan?
 
 #### Goals
 
 Adapun tujuan dari dibentuk nya Proyek ini, adalah:
 
-* mengetahui banyaknya badges yang paling banyak didapatkan
-* mampu memprediksi poin kegunaan dari datasets
+* mampu menganalisa datasets dengan poin yang paling banyak
+* mampu memprediksi banyaknya badges yang paling sering didapatkan
 
 ### Data Understanding
 
@@ -62,15 +60,27 @@ Standarisasi ini adalah teknik machine learning yang digunakan agar model dapat 
 
 #### Univariate Analysis
 
-Mari kita berfokus ke variabel 'upvotes'. Dari hasil tersebut, didapatkan analisa bahwa grafik 'upvotes' akan semakin turun seiring dengan banyak nya jumlah sample.
+Mari kita lihat terlebih dahulu grafik yang saya dapatkan:
+
+<img width="513" alt="paint 33" src="https://user-images.githubusercontent.com/93527916/190047190-292c84fa-133e-48c1-a5b5-c9f3b7969741.png">
+
+Mari kita berfokus ke variabel 'upvotes' yang merupakan target utama kita. dari hasil tersebut, didapatkan analisa bahwa grafik 'upvotes' akan semakin turun seiring dengan banyak nya jumlah sample.
 
 #### Multivariate Analysis
 
-Kita akan berfokus ke variabel 'list'. Dalam hal tersebut, artinya kita akan berfokus ke baris pertama dari atas. Dimana sumbu y nya adalah 'list'. lalu kita lihat korelasi fitur 'list' tersebut dengan fitur numerik lainnya. Pada pola tersebut, terlihat fitur 'usability' memiliki korelasi negatif dengan 'list'. 
+Mari kita lihat terlebih dahulu grafik yang saya dapatkan:
+
+![image](https://user-images.githubusercontent.com/110523200/190850190-67d9f4c5-3e96-4ea6-9962-6c53dd0103f2.png)
+
+Sama seperti sebelumnya, kita akan berfokus ke variabel 'upvotes'. Dalam hal tersebut, artinya kita akan berfokus ke baris ke 3 dari atas. dimana sumbu y nya adalah 'upvotes'. lalu kita lihat korelasi fitur 'upvotes' tersebut dengan fitur numerik lainnya. pada pola tersebut, terlihat fitur 'list' memiliki korelasi negatif dengan 'upvotes'. Ditandai dengan menurunnya variabel y saat terjadi kenaikan pada variabel x, namun untuk korelasi nya masih lemah karena sebarannya tidak membentuk pola sempurna. Sedangkan fitur 'usability' memiliki korelasi acak dengan fitur 'upvotes'. Hal tersebut karena sebarannya tidak membentuk pola dan naik turun variabel y saat terjadi kenaikan pada variabel x.
 
 #### Correlation Matrix
 
-Disini kita akan berfokus ke korelasi fitur 'list' dengan fitur numerik lainnya. Adapun koefisien korelasi berkisar antara -1 dan +1. dari gambar tersebut, dapat dianalisa bahwa fitur 'usability' memiliki kolerasi yang lebih kecil. 
+mari kita lihat terlebih dahulu korelasi yang saya dapatkan:
+
+![image](https://user-images.githubusercontent.com/110523200/190850321-ffef1c57-3862-4712-a93f-6dead6cc7fc9.png)
+
+disini kita akan berfokus ke korelasi fitur 'upvotes' dengan fitur numerik lainnya. Adapun koefisien korelasi berkisar antara -1 dan +1. dari gambar tersebut, dapat dianalisa bahwa fitur 'usability' memiliki kolerasi yang lebih kecil. Korelasi 'upvotes' dengan 'usability' bernilai 0.06, dan nilai tersebut hampir mendekati nilai 0. 
 
 ### Modeling
 
@@ -99,12 +109,18 @@ Boosting ini bertujuan untuk meningkatkan performa atau akurasi prediksi. Algori
 
 ### Evaluation
 
-Untuk evaluasi ini saya menggunakan metrik MSE (Mean Squad Error) yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. MSE didefinisikan dengan persamaan berikut:
+untuk evaluasi ini saya menggunakan metrik MSE (Mean Squad Error) yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. MSE didefinisikan dengan persamaan berikut:
 
 dengan nilai N = jumlah dataset, yi = nilai sebenarnya, dan y_pred = nilai prediksi.
 
-Dari Model Evaluation tersebut, didapatkan bahwa model dengan Boosting memiliki performa paling besar
+adapun grafik yang saya dapatkan setelah menggunakan metrik ini, yaitu:
 
-Selain itu saya dapat menentukan poin kegunaan rata-rata dari yang terbesar hingga terkecil, dan saya menentukan banyaknya badges yang paling banyak didapatkan yaitu ada Silver dengan jumlah lebih dari 400 pengguna.
+![image](https://user-images.githubusercontent.com/110523200/190850533-8cbef5de-0493-41b7-a555-4ae17ec27798.png)
+
+Dari Model Evaluation tersebut, didapatkan bahwa model dengan Boosting memiliki performa paling baik
+
+#### Kesimpulan
+
+Dari hasil model yang telah saya buat, tentu saja hasilnya belum memuaskan. Saya harus melakukan improvisasi lagi terkait model tersebut. Melakukan data cleaning mungkin pilihan terbaik agar model dapat berjalan secara maksimal.
 
 
