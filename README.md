@@ -56,7 +56,9 @@ hal pertama adalah membagi dataset menjadi train data dan test data. dengan meng
 
 #### Standarisasi 
 
-Standarisasi ini adalah teknik machine learning yang digunakan agar model dapat dengan mudah dilatih. disini saya menggunakan StandardScaler agar nilai nya berada diantara -1 dan 1
+Saya menangani outliers dengan teknik IQR method dengan konsep kuartil. IQR adalah singkatan dari Inter Quartile Range. Seperempat dari data berada di bawah kuartil pertama (Q1) dan tiga perempat dari data berada di kuartil ketiga (Q3). Dengan demikian interquartile range atau IQR = Q3 - Q1.
+
+Standarisasi ini adalah teknik machine learning yang digunakan agar model dapat dengan mudah dilatih. Disini saya menggunakan StandardScaler agar nilai nya berada diantara -1 dan 1
 
 #### Univariate Analysis
 
