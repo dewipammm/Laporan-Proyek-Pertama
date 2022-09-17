@@ -111,13 +111,24 @@ Boosting ini bertujuan untuk meningkatkan performa atau akurasi prediksi. Algori
 
 untuk evaluasi ini saya menggunakan metrik MSE (Mean Squad Error) yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. MSE didefinisikan dengan persamaan berikut:
 
-dengan nilai N = jumlah dataset, yi = nilai sebenarnya, dan y_pred = nilai prediksi.
+|          |    Train   |    Test    | 
+|----------|------------|------------|
+|   KNN    | 204.317621 | 398.604087 |
+|    RF    | 22.557475  | 32.628041  |
+| Boosting | 781.28434  | 770.971146 |
 
+dengan nilai N = jumlah dataset, yi = nilai sebenarnya, dan y_pred = nilai prediksi.
 adapun grafik yang saya dapatkan setelah menggunakan metrik ini, yaitu:
+
+|   | y_true | prediksi_KNN | prediksi_RF | prediksi_Boosting |
+|---|--------|--------------|-------------|-------------------|
+|701|  701   |    712.0	    |    708.5    |       722.6       |
+
+dan prediksi yang saya dapatkan adalah:
 
 ![image](https://user-images.githubusercontent.com/110523200/190850533-8cbef5de-0493-41b7-a555-4ae17ec27798.png)
 
-Dari Model Evaluation tersebut, didapatkan bahwa model dengan Boosting memiliki performa paling baik
+Dari Model Evaluation tersebut, didapatkan bahwa model dengan Boosting memiliki nilai paling tinggi.
 
 #### Kesimpulan
 
