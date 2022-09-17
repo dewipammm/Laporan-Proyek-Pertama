@@ -118,17 +118,24 @@ untuk evaluasi ini saya menggunakan metrik MSE (Mean Squad Error) yang menghitun
 | Boosting | 781.28434  | 770.971146 |
 
 dengan nilai N = jumlah dataset, yi = nilai sebenarnya, dan y_pred = nilai prediksi.
+
+dan prediksi yang saya dapatkan adalah:
+
+![image](https://user-images.githubusercontent.com/110523200/190850533-8cbef5de-0493-41b7-a555-4ae17ec27798.png)
+
+Dari Model Evaluation tersebut, didapatkan bahwa model dengan Boosting memiliki nilai paling baik. Karena diperolah data sebagai berikut :
+
+prediksi_KNN yaitu 712.0 
+prediksi_RF	yaitu 708.5
+prediksi_Boosting yaitu 722.6
+
 adapun grafik yang saya dapatkan setelah menggunakan metrik ini, yaitu:
 
 |   | y_true | prediksi_KNN | prediksi_RF | prediksi_Boosting |
 |---|--------|--------------|-------------|-------------------|
 |701|  701   |    712.0	    |    708.5    |       722.6       |
 
-dan prediksi yang saya dapatkan adalah:
-
-![image](https://user-images.githubusercontent.com/110523200/190850533-8cbef5de-0493-41b7-a555-4ae17ec27798.png)
-
-Dari Model Evaluation tersebut, didapatkan bahwa model dengan Boosting memiliki nilai paling tinggi.
+Dengan data tersebut didapatkan prediksi dengan model Boosting memiliki nilai paling tinggi.
 
 #### Kesimpulan
 
